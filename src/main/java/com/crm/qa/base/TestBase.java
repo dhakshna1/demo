@@ -9,6 +9,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 import com.crm.qa.util.TestUtil;
 //create constructor and read your properties
 public class TestBase{
@@ -37,10 +39,10 @@ public class TestBase{
 			driver = new ChromeDriver();
 			System.out.println("Driver opened");
 		}
-		/*else if(browserName.equals("firefox")) {
+		else if(browserName.equals("firefox")) {
 			System.setProperty("webdriver.geckco.driver", "F:\\geckodriver\\geckodriver.exe");
 			driver = new FirefoxDriver();
-		}*/
+		}
 			driver.manage().window().maximize();
 			System.out.println("Mazimised");
 			driver.manage().deleteAllCookies();
